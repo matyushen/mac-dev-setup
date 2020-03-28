@@ -44,7 +44,7 @@ chsh -s /usr/local/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install apps
-brew cask install docker iterm2 google-chrome visual-studio-code coconutbattery notion private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password graphql-playground webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
+brew cask install docker iterm2 google-chrome visual-studio-code whatsapp coconutbattery notion private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password graphql-playground webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
 
 # Install setting sync extension for vs code
 code --install-extension shan.code-settings-sync
