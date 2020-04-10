@@ -1,22 +1,39 @@
 #!/bin/bash
 
+# Install Command Line Tools for Xcode. Needed for Homebrew
+xcode-select --install
+
 # Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Update Homebrew's directory of formulae
 brew update
 brew upgrade
 
 # Install cask
 brew tap caskroom/cask
 
-# Remove outdated versions from the cellar.
+# Install apps
+brew cask install battle-net docker cheatsheet google-hangouts iterm2 google-chrome visual-studio-code
+whatsapp coconutbattery atom notion superduper private-internet-access slack oversight hyper spotify
+altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox
+homebrew/cask-versions/firefox-developer-edition
+
+# Other brew packages
+brew install yarn git zsh hub nvm zsh-syntax-highlighting zsh-autosuggestions
+
+# Install fonts
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code font-source-code-pro
+
+# Remove outdated versions from the cellar
 brew cleanup
 
-# Add permissions to user (or group) under this folders and enclosed items
-sudo chown -R $(whoami) /usr/local/opt
-sudo chown -R $(whoami) /usr/local/share
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# WARNING: Add next permission just in case you machine is used by only one user.
-sudo chown -R $(whoami) /usr/local/lib
+# Use the Homebrew's version of ZSH
+chsh -s $(which zsh)
 
 # Install node through NVM
 brew install nvm
@@ -28,23 +45,6 @@ nvm use default
 # Update NPM
 npm i -g npm
 
-# Other brew pakcages
-brew install yarn git zsh hub
-
-# git config --global core.editor 'code --wait'
-
-# Install Fira font (it has powerline support built in)
-brew tap homebrew/cask-fonts
-brew cask install font-fira-code
-
-# Use the Homebrew version of ZSH
-chsh -s /usr/local/bin/zsh
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Install apps
-brew cask install docker iterm2 google-chrome visual-studio-code whatsapp coconutbattery notion private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password graphql-playground webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
-
-# Install setting sync extension for vs code
-code --install-extension shan.code-settings-sync
+# Add permissions to user (or group) under this folders and enclosed items
+sudo chown -R $(whoami) /usr/local/opt
+sudo chown -R $(whoami) /usr/local/share
