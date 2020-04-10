@@ -14,10 +14,7 @@ brew upgrade
 brew tap caskroom/cask
 
 # Install apps
-brew cask install battle-net docker cheatsheet google-hangouts iterm2 google-chrome visual-studio-code
-whatsapp coconutbattery atom notion superduper private-internet-access slack oversight hyper spotify
-altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox
-homebrew/cask-versions/firefox-developer-edition
+brew cask install battle-net docker cheatsheet tor google-hangouts iterm2 google-chrome visual-studio-code whatsapp coconutbattery atom notion superduper private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
 
 # Other brew packages
 brew install yarn git zsh hub nvm zsh-syntax-highlighting zsh-autosuggestions
