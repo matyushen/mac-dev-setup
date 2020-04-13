@@ -1,47 +1,53 @@
 #!/bin/bash
 
-# Install Command Line Tools for Xcode. Needed for Homebrew
+echo "Installing Command Line Tools for Xcode..."
 xcode-select --install
 
-# Install Homebrew
+echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# Update Homebrew's directory of formulae
+echo "Updating Homebrew & formulae..."
 brew update
 brew upgrade
 
-# Install cask
-brew tap caskroom/cask
+echo "Installing other brew packages..."
+brew install git yarn git zsh hub nvm zsh-syntax-highlighting zsh-autosuggestions
 
-# Install apps
-brew cask install battle-net docker cheatsheet tor google-hangouts iterm2 google-chrome visual-studio-code whatsapp coconutbattery atom notion superduper private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
+echo "Setting git to use the osxkeychain credential helper..."
+git config --global credential.helper osxkeychain
 
-# Other brew packages
-brew install yarn git zsh hub nvm zsh-syntax-highlighting zsh-autosuggestions
+echo "Installing apps with brew cask..."
+brew cask install docker cheatsheet google-chrome visual-studio-code whatsapp coconutbattery notion superduper private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
 
-# Install fonts
+echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code font-source-code-pro
 
-# Remove outdated versions from the cellar
+echo "Removing outdated versions from the cellar..."
+brew cask cleanup
 brew cleanup
 
-# Install oh-my-zsh
+echo "Checking for cask configuration issues..."
+brew cask doctor
+
+echo "Install oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Use the Homebrew's version of ZSH
+echo "Use the Homebrew's version of ZSH"
 chsh -s $(which zsh)
 
-# Install node through NVM
+echo "Install node through NVM"
 brew install nvm
 mkdir ~/.nvm
 nvm install --lts
 nvm alias default stable
 nvm use default
 
-# Update NPM
+echo "Update NPM"
 npm i -g npm
 
 # Add permissions to user (or group) under this folders and enclosed items
-sudo chown -R $(whoami) /usr/local/opt
-sudo chown -R $(whoami) /usr/local/share
+# sudo chown -R $(whoami) /usr/local/opt
+# sudo chown -R $(whoami) /usr/local/share
+
+echo "Done!"

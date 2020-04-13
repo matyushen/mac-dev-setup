@@ -18,10 +18,7 @@ git config --global user.email "your_email@youremail.com"
 
 ### Cache your GitHub password in Git
 Official [instructions](https://help.github.com/en/github/using-git/caching-your-github-password-in-git)
-1. [Create a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal
--access-token-for-the-command-line) for the command line (If you have enabled two-factor authentication, or if you are
- accessing an
- organization that uses SAML single sign-on)
+1. [Create a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) for the command line (If you have enabled two-factor authentication, or if you are accessing an organization that uses SAML single sign-on)
  2. [Cache your GitHub password in Git](https://help.github.com/en/github/using-git/caching-your-github-password-in-git)
 
 ## System Preferences
