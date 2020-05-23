@@ -39,11 +39,9 @@ echo "Force reload of your .zshrc"
 source ~/.zshrc
 
 echo "Install node through NVM"
-brew install nvm
-mkdir ~/.nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install --lts
-nvm alias default stable
-nvm use default
+nvm use stable
 
 echo "Update NPM"
 npm i -g npm
