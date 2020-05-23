@@ -36,48 +36,76 @@ Official [instructions](https://help.github.com/en/github/using-git/caching-your
 ## oh-my-zsh 
 
 Open the `.zshrc` file with vscode:
+
 ````
 code ~/.zshrc
 ````
 
-Copy contents of the `.zshrc` file from this repo
-
 Add plugins
+
 ````
-plugins=(
-    z
-    git
-    yarn
-    nvm
-    tig
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-)
+plugins=(z git yarn nvm tig)
 ```` 
 
 Change theme:
+
 ````
 ZSH_THEME="agnoster"
 ````
 
 Or make it random:
+
 ```
 ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=(
-    "robbyrussell"
-    "agnoster"
-    "cobalt2"
+ "robbyrussell"
+ "agnoster"
+ "cobalt2"
 )
 ```
 
 Add aliases:
 ````
-    alias vszsh="code ~/.zshrc"
-    alias updzsh="source ~/.zshrc"
+alias vszsh="code ~/.zshrc"
+alias updzsh="source ~/.zshrc"
 ````
 
-## iTerm
-- Change font to Fira in Iterm's settings
-- Install iTerm2 “color schemes” https://github.com/mbadolato/iTerm2-Color-Schemes
-- Argonaut, Brogrammer, ChallengerDeep, Cobalt2
+Get rid of the `%` sign on the start of th Hyper
+See https://github.com/zeit/hyper/issues/3586
+
+````
+unsetopt PROMPT_SP
+````
+
+Activate plugins:
+
+````
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+````
+
+You will also need to force reload of your .zshrc:
+
+````
+source ~/.zshrc
+````
+
+## Hyper
+Change font
+
+````
+fontFamily: 'Fira Code',
+uiFontFamily: 'Fira Code',
+````
+
+Add plugins
+
+````
+plugins: [
+ "hyper-night-owl",
+ "hypercwd",
+ "hyperlinks",
+ "hyper-quit"
+],
+````
 
