@@ -11,20 +11,19 @@ brew update
 brew upgrade
 
 echo "Installing other brew packages..."
-brew install git yarn git zsh hub nvm zsh-syntax-highlighting zsh-autosuggestions
+brew install git yarn git zsh hub zsh-syntax-highlighting zsh-autosuggestions
 
 echo "Setting git to use the osxkeychain credential helper..."
 git config --global credential.helper osxkeychain
 
 echo "Installing apps with brew cask..."
-brew cask install docker cheatsheet google-chrome visual-studio-code whatsapp coconutbattery notion superduper private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
+brew cask install docker google-chrome teamviewer visual-studio-code whatsapp coconutbattery notion superduper private-internet-access slack oversight hyper spotify altair-graphql-client spectacle 1password webstorm github appcleaner discord figma firefox homebrew/cask-versions/firefox-developer-edition
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code font-source-code-pro
+brew cask install font-fira-code font-source-code-pro font-inter
 
 echo "Removing outdated versions from the cellar..."
-brew cask cleanup
 brew cleanup
 
 echo "Checking for cask configuration issues..."
@@ -35,6 +34,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 echo "Use the Homebrew's version of ZSH"
 chsh -s $(which zsh)
+
+echo "Force reload of your .zshrc"
+source ~/.zshrc
 
 echo "Install node through NVM"
 brew install nvm
