@@ -11,7 +11,7 @@ brew update
 brew upgrade
 
 echo "Installing other brew packages..."
-brew install git yarn git zsh hub zsh-syntax-highlighting zsh-autosuggestions
+brew install git yarn git zsh hub zsh-syntax-highlighting zsh-autosuggestions gh
 
 echo "Setting git to use the osxkeychain credential helper..."
 git config --global credential.helper osxkeychain
