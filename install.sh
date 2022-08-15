@@ -4,7 +4,7 @@ echo "Installing Command Line Tools for Xcode..."
 xcode-select --install
 
 echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Updating Homebrew & formulae..."
 brew update
