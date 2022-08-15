@@ -21,7 +21,7 @@ brew install --cask docker google-chrome visual-studio-code whatsapp postman tel
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code font-source-code-pro font-inter
+brew install font-fira-code font-source-code-pro font-inter --cask
 
 echo "Removing outdated versions from the cellar..."
 brew cleanup
