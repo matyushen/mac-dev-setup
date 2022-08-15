@@ -30,7 +30,7 @@ echo "Checking for cask configuration issues..."
 brew cask doctor
 
 echo "Install oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 echo "Use the Homebrew's version of ZSH"
 chsh -s $(which zsh)
