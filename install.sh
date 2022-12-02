@@ -11,17 +11,17 @@ brew update
 brew upgrade
 
 echo "Installing other brew packages..."
-brew install git yarn git zsh hub zsh-syntax-highlighting zsh-autosuggestions gh
+brew install nvm git yarn zsh hub zsh-syntax-highlighting zsh-autosuggestions gh pnpm
 
 echo "Setting git to use the osxkeychain credential helper..."
 git config --global credential.helper osxkeychain
 
 echo "Installing apps with brew cask..."
-brew install --cask docker google-chrome visual-studio-code whatsapp postman telegram superduper private-internet-access slack oversight hyper spotify rectangle 1password webstorm github appcleaner discord cloudflare-warp firefox homebrew/cask-versions/firefox-developer-edition
+brew install --cask docker google-chrome visual-studio-code whatsapp postman telegram superduper private-internet-access slack oversight hyper spotify rectangle 1password webstorm github appcleaner discord cloudflare-warp firefox
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
-brew install font-fira-code font-source-code-pro font-inter --cask
+brew install font-fira-code font-inter --cask
 
 echo "Removing outdated versions from the cellar..."
 brew cleanup
@@ -39,7 +39,7 @@ echo "Force reload of your .zshrc"
 source ~/.zshrc
 
 echo "Install node through NVM"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 nvm install --lts
 nvm use stable
 
