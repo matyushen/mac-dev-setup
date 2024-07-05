@@ -125,46 +125,6 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-##########################
-# ENABLE FILEVAULT DISK ENCRYPTION
-##########################
-
-sudo fdesetup enable
-
-##########################
-# ENABLE FIREWALL
-##########################
-
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-
-# Disable specific Spotlight categories
-SPOTLIGHT_CATEGORIES=(
-    "APPLICATIONS"
-    "SYSTEM_PREFS"
-    "DIRECTORIES"
-    "PDF"
-    "FONTS"
-    "DOCUMENTS"
-    "MESSAGES"
-    "CONTACT"
-    "EVENT_TODO"
-    "IMAGES"
-    "BOOKMARKS"
-    "MUSIC"
-    "MOVIES"
-    "PRESENTATIONS"
-    "SPREADSHEETS"
-    "SOURCE"
-)
-for CATEGORY in "${SPOTLIGHT_CATEGORIES[@]}"; do
-    defaults write com.apple.spotlight orderedItems -array-add "{enabled = 0; name = \"${CATEGORY}\";}"
-done
-
-# Restart Spotlight to apply changes
-killall mds
-sudo mdutil -i on /
-sudo mdutil -E /
-
 killall Finder
 killall Dock
 killall Spotlight
