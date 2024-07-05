@@ -78,10 +78,9 @@ defaults write com.apple.dock show-recents -bool false
 defaults write -g com.apple.trackpad.scaling 2
 defaults write -g com.apple.mouse.scaling 2.5
 
+# TODO: Do not work
 # Disable 'natural' (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
-# TODO: Tap to ckick
 
 ##########################
 # VARIOUS
@@ -119,6 +118,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Preventing Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+# TODO: Do not work
 # Tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
