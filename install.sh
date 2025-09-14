@@ -11,13 +11,13 @@ brew update
 brew upgrade
 
 echo "Installing other brew packages..."
-brew install git yarn zsh hub zsh-syntax-highlighting zsh-autosuggestions gh pnpm fzf httpie neovim stow sqlite tmux postgresql@14 python
+brew install git yarn zsh zsh-syntax-highlighting zsh-autosuggestions gh pnpm fzf neovim stow sqlite tmux postgresql@17 python
 
 echo "Setting git to use the osxkeychain credential helper..."
 git config --global credential.helper osxkeychain
 
 echo "Installing apps with brew cask..."
-brew install --cask raycast docker google-chrome visual-studio-code whatsapp postman telegram slack spotify 1password webstorm goland datagrip github aerospace chatgpt figma ngrok wezterm firefox@developer-edition obsidian openvpn-connect cleanshot steam altair-graphql-client linear-linear utm
+brew install --cask raycast docker google-chrome postman slack spotify tableplus 1password webstorm datagrip github chatgpt figma ngrok ghostty firefox@developer-edition obsidian openvpn-connect cleanshot nikitabobko/tap/aerospace linear-linear
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
