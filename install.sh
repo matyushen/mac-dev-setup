@@ -17,7 +17,7 @@ echo "Setting git to use the osxkeychain credential helper..."
 git config --global credential.helper osxkeychain
 
 echo "Installing apps with brew cask..."
-brew install --cask raycast docker google-chrome postman slack spotify tableplus 1password webstorm datagrip github chatgpt figma ngrok ghostty firefox@developer-edition obsidian openvpn-connect cleanshot nikitabobko/tap/aerospace linear-linear
+brew install --cask raycast docker google-chrome postman slack spotify tableplus 1password webstorm datagrip github chatgpt figma ngrok ghostty firefox@developer-edition obsidian openvpn-connect cleanshot linear-linear
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
